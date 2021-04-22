@@ -1,0 +1,65 @@
+<div class="container-mt-3">
+    <div class="col-md-6 offset-md-3">
+        <div class="h2 text-center mt-3 mb-3 bg-light"><i class="fas fa-drafting-compass mr-2"></i>Add Food Data</div>
+        <form #stationaryform=ngForm>
+            <div class="form-row">
+                <div class="form-group col" >
+                    <label for="inventory">Inventory ID</label>
+                    <input type="text" name="inventoryid" class="form-control" [(ngModel)]='form.inventoryid' placeholder="inventory" required>
+                </div>
+                <div class="form-group col">
+                    <label for="name">Type</label>
+                    <input type="text" name="typeof" class="form-control" [(ngModel)]='form.typeof' placeholder="Enter type of asset" required>
+                </div>
+                <div class="form-group col">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" class="form-control" [(ngModel)]='form.name' placeholder="Enter name" required>
+                </div>
+            </div>
+            <div class="form-row">
+            <div class="form-group col">
+                <label for="Unit">Unit</label>
+                <input type="text" name="unit" [(ngModel)]='form.unit' class="form-control" placeholder="Enter unit" >
+            </div>
+            <div class="form-group col">
+                <label for="unit price">Unit Price</label>
+                <input type="number" name="unitprice" class="form-control" [(ngModel)]='form.unitprice' placeholder="Enter Unit Price">
+            </div>
+            <div class="form-group col">
+                <label for="quantity">Quantity in Stock</label>
+                <input type="number" name="quantity" class="form-control" [(ngModel)]='form.quantity' placeholder="Enter Quantity" required>
+            </div>
+         </div>
+         <div class="form-row">
+            <div class="form-group col">
+                <label for="Inventory value">Inventory Value</label>
+                <input type="number" name="inventoryvalue" class="form-control" [(ngModel)]='form.inventoryvalue' placeholder="Enter Inventory value" >
+            </div>
+            <div class="form-group col">
+                <label for="unit price">Reorder Level</label>
+                <input type="number" name="reorderlevel" class="form-control" [(ngModel)]='form.reorderlevel' placeholder="Enter Reorder Level">
+            </div>
+            <div class="form-group col">
+                <label for="quantity">Reorder Time in Days</label>
+                <input type="number" name="reordertime" class="form-control" [(ngModel)]='form.reordertime' placeholder="Enter Reorder Time in Days">
+            </div>
+         </div>
+        
+            <div class="form-group " >
+                <label for="inventory">Quantity in Reorder</label>
+                <input type="number" name="quantityinreorder" class="form-control" [(ngModel)]='form.quantityinreorder'  placeholder="Quantity in Reorder" >
+            </div>
+        
+            <div class="form-group ">
+                <label for="name">Discontinued</label>
+                <input type="text" name="discontinued" class="form-control" [(ngModel)]='form.discontinued' placeholder="Discontinued ??" >
+            
+        </div>
+                <button type="submit" class="btn btn-info" routerLink='/category'><i class="far fa-arrow-alt-circle-left mr-3"></i>Back</button>
+                <button type="submit" (click)='additem()' class="btn btn-primary float-right" [disabled]='!stationaryform.valid'><i class="fas fa-external-link-alt mr-2"></i>Add</button>
+        </form>
+    </div>
+</div>
+
+
+

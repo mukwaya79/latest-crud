@@ -1,0 +1,24 @@
+<div class="row">
+<div class="container col-md-6 mt-3">
+          <div class="card">
+        <div class="card-header text-center"><i class="fas fa-sign-in-alt mr-4"></i>Login</div>
+        <div class="card-body">
+            <form #loginform=ngForm (ngSubmit)= 'logdata()'>
+              <div class="mb-2">
+                <label for="email" class="form-label" >Email</label>
+                <input [(ngModel)]='form.email' type="email" name="email" class="form-control"  required>
+              </div>
+              <div class="mb-2">
+                <label for="password" class="form-label">Password</label>
+                <input [(ngModel)]='form.password' type="password" name="password" class="form-control" required>
+              </div>
+              <div class="mb-2">
+                <button [disabled]='!loginform.valid' type="submit"  class="form-control bg-warning">submit</button>
+              </div>
+            </form>
+    
+        </div>
+      </div>
+  
+    </div>
+</div>

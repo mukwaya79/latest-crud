@@ -1,0 +1,39 @@
+<div class="container">
+    <div >
+        <h2 class=" text-center mt-3 mb-3 bg-light">
+            <button type="submit" class="mr-5 btn btn-info" routerLink='/dashboard'>
+            <i class="far fa-arrow-alt-circle-left mr-3"></i>Back
+            </button>   
+          Supplier Data
+    </h2>
+    </div>
+    <table  id="myTable" class="table table-striped table-responsive-sm">
+        <thead>
+            <tr>
+                <td>ID</td>
+                <td>Name</td>
+                <td>Email</td>
+                <td>Tel. Number</td>
+                <td>alternate number 2</td>
+                <td>alternate number 3</td>
+                <td>Tin</td>
+                <td></td>
+                <td></td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor ="let item of Supplier.results">
+                <td>{{item.id}}</td>
+                <td>{{item.name}}</td>
+                <td>{{item.email}}</td>
+                <td>{{item.telephone}}</td>
+                <td>{{item.phone}}</td>
+                <td>{{item.number}}</td>
+                <td>{{item.tin}}</td>
+                <td><a routerLink='/update/{{item.id}}' ><i class="fas fa-user-edit"></i></a></td>
+                <td><a (click)='delete(item.id)'><i class="far fa-trash-alt point" ></i></a></td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
